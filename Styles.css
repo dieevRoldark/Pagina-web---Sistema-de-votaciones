@@ -93,7 +93,7 @@ body{
 .login-button {
    margin-right: 10px;
    
-   button {
+   a {
       background-color: var(--bg-primary);
       color: var(--accent-gold-light);
       border: 1px solid var(--border-color);
@@ -101,6 +101,7 @@ body{
       border-radius: var(--radius-pill);
       cursor: pointer;
       transition: var(--transition-smooth);
+      text-decoration: none;
 
       &:hover {
          background-color: var(--accent-ochre);
@@ -153,7 +154,7 @@ body{
    .voting-button {
       margin-top: 20px;
 
-      button {
+      a {
          background-color: var(--accent-gold);
          color: var(--bg-primary);
          border: none;
@@ -162,6 +163,7 @@ body{
          cursor: pointer;
          transition: var(--transition-smooth);
          font-weight: bold;
+         text-decoration: none;
 
          &:hover {
             background-color: var(--accent-ochre);
@@ -300,3 +302,141 @@ body {
 }
 
 
+/* ---------- END FOOTER VAR -------------*/
+
+
+
+
+/*--------- Login Page Styles --------*/
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 50px;
+}
+
+.login-form {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 400px;
+}
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: var(--text-muted);
+}
+
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+   input[type="submit"] {
+        background-color: var(--accent-gold);
+        color: var(--bg-primary);
+        border: none;
+        padding: 10px 20px;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        font-weight: bold;
+
+        &:hover {
+            background-color: var(--accent-ochre);
+            color: var(--bg-primary);
+        }
+    }
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    transition: var(--transition-smooth);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*--------- Login Page END --------*/
+
+/* -------- Register Page Styles --------*/
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 50px;
+    margin-top: 90px;
+}
+
+.register-form {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-header h1 {
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.register-header p {
+    color: var(--text-muted);
+}
+
+.register-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input[type="submit"] {
+        background-color: var(--accent-gold);
+        color: var(--bg-primary);
+        border: none;
+        padding: 10px 20px;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        font-weight: bold;
+
+        &:hover {
+            background-color: var(--accent-ochre);
+            color: var(--bg-primary);
+        }
+    }
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+}
