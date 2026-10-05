@@ -844,3 +844,238 @@ body {
 
 /*----------------- END Sección de Votaciónes disponibles ------------*/
 
+/*--------- Botones de acción ---------*/
+
+.btn-votar {
+   background-color: var(--accent-gold);
+   color: var(--bg-primary);
+   border: none;
+   padding: 10px 20px;
+   border-radius: var(--radius-pill);
+   font-weight: bold;
+   font-size: 0.9rem;
+   text-align: center;
+   text-decoration: none;
+   cursor: pointer;
+   transition: var(--transition-smooth);
+
+   &:hover {
+      background-color: var(--accent-ochre);
+      color: var(--bg-primary);
+   }
+}
+
+.btn-secundario {
+   background-color: transparent;
+   color: var(--accent-gold-light);
+   border: 1px solid var(--border-color);
+   padding: 10px 20px;
+   border-radius: var(--radius-pill);
+   font-weight: 500;
+   font-size: 0.9rem;
+   text-align: center;
+   text-decoration: none;
+   cursor: pointer;
+   transition: var(--transition-smooth);
+
+   &:hover {
+      background-color: var(--bg-glass);
+      border-color: var(--accent-ochre);
+      color: var(--accent-ochre);
+   }
+}
+
+.btn-deshabilitado {
+   opacity: 0.45;
+   pointer-events: none;
+}
+/*--------- Botones de acción END ---------*/
+
+/*--------- volver atrar ---------*/
+
+.volver-atras {
+   margin: 20px;
+
+   a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+
+      &:hover {
+         color: var(--accent-gold-light);
+      }
+   }
+}
+
+/*----------------- ESTILOS PAGINA DONDE SER ELIGE EL VOTO ------------*/
+
+.votar-section {
+   max-width: 640px;
+   margin: 0px auto;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.votar-header {
+
+   h1 {
+      color: var(--accent-gold-light);
+      margin: 10px 0px 5px;
+   }
+
+   p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+   }
+}
+
+.votar-form {
+   background-color: var(--bg-secondary);
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-lg);
+   box-shadow: var(--shadow-card);
+   padding: 20px;
+}
+
+.opciones-lista {
+   border: none;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.opciones-legend {
+   color: var(--accent-gold);
+   font-size: 1rem;
+   font-weight: bold;
+   margin-bottom: 12px;
+   padding: 0px;
+}
+
+.opcion-voto {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 12px;
+   background-color: var(--bg-primary);
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-md);
+   padding: 12px 14px;
+   cursor: pointer;
+   transition: var(--transition-smooth);
+
+   input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0px;
+      height: 0px;
+   }
+
+   &:hover {
+      border-color: var(--accent-ochre);
+      transform: translateY(-2px);
+   }
+
+   &:has(input:checked) {
+      border-color: var(--accent-gold);
+      background-color: var(--bg-glass);
+      box-shadow: var(--shadow-gold-glow);
+   }
+}
+
+.opcion-radio {
+   width: 20px;
+   height: 20px;
+   flex-shrink: 0;
+   border: 2px solid var(--accent-gold);
+   border-radius: var(--radius-pill);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: var(--transition-smooth);
+
+   &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: var(--radius-pill);
+      background-color: var(--accent-gold);
+      transform: scale(0);
+      transition: var(--transition-smooth);
+   }
+}
+
+.opcion-voto:has(input:checked) .opcion-radio::after {
+   transform: scale(1);
+}
+
+.opcion-voto:has(input:focus-visible) {
+   outline: 2px solid var(--accent-gold-light);
+   outline-offset: 2px;
+}
+
+.opcion-foto {
+   width: 48px;
+   height: 48px;
+   flex-shrink: 0;
+   border-radius: var(--radius-sm);
+   object-fit: cover;
+   border: 1px solid var(--border-color);
+}
+
+.opcion-datos {
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+}
+
+.opcion-nombre {
+   color: var(--accent-gold-light);
+   font-size: 0.95rem;
+   font-weight: 500;
+}
+
+.opcion-genero {
+   color: var(--text-muted);
+   font-size: 0.78rem;
+}
+
+.votar-actions {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-top: 20px;
+   padding-top: 20px;
+   border-top: 1px solid var(--border-color);
+
+   > * {
+      flex: 1 1 180px;
+   }
+}
+
+.votar-submit {
+   background-color: var(--accent-gold);
+   color: var(--bg-primary);
+   border: none;
+   padding: 12px 20px;
+   border-radius: var(--radius-pill);
+   font-weight: bold;
+   font-size: 0.95rem;
+   cursor: pointer;
+   transition: var(--transition-smooth);
+
+   &:hover {
+      background-color: var(--accent-ochre);
+      color: var(--bg-primary);
+   }
+}
+
