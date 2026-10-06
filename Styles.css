@@ -569,6 +569,7 @@ body {
 .categorias-container {
     flex: 1;
     padding: 0px;
+    margin: 0px;
 }
 
 .categorias-wrapper {
@@ -586,7 +587,7 @@ body {
 
 .categorias-header{
    text-align: center;
-   padding: 20px;
+   padding: 5px 20px;
 
    h1{
       color: var(--accent-ochre);
@@ -650,7 +651,7 @@ body {
 
 
 /* ==========================================
-         media queries desktop mode
+         media queries desktop + Tablet mode
    ========================================== */
 
 /* ---------- TABLET (>= 768px) ---------- */
@@ -911,6 +912,92 @@ body {
    }
 }
 
+/*--------- volver atrar END ---------*/
+
+/*--------- TARJETA DETALLES DE VOTACIÓN ---------*/
+.detalles-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center
+
+}
+.detalles-article {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 640px;
+   border: 1px solid var(--border-color);
+   box-shadow: var(--shadow-card);
+   border-radius: var(--radius-lg);
+   padding: 20px;
+   margin: auto 10px;
+}
+
+.detalles-header {
+   h1{
+      color: var(--accent-ochre);
+      font-size: 1.5rem; 
+   }
+
+   p {
+      color: var(--accent-gold-light);
+      font-size: 0.9rem;
+      line-height: 1.5;
+   }
+}
+
+
+.detalles-description {
+   color: var(--text-muted);
+   font-size: 0.8rem;
+   line-height: 1.5;
+   text-wrap: wrap;
+}
+
+.detalle-info {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-md);
+   padding: 20px;
+}
+
+.detalle-dato {
+   color: var(--text-main);
+   font-size: 0.85rem;
+   line-height: 1.4;
+   border-bottom: 0.1px solid var(--border-color);
+}
+
+.detalle-reglas {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+   
+   h2 {
+      color: var(--accent-gold);
+      font-size: 1.3rem;
+      padding: 0px;
+      margin: auto 0px;
+   }
+
+   ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+
+      li {
+         color: var(--text-muted);
+         font-size: 1rem;
+         line-height: 1;
+      }
+   }
+}
+
+/*--------- TARJETA DETALLES DE VOTACIÓN END---------*/
+
 /*----------------- ESTILOS PAGINA DONDE SER ELIGE EL VOTO ------------*/
 
 .votar-section {
@@ -919,6 +1006,7 @@ body {
    display: flex;
    flex-direction: column;
    gap: 20px;
+   padding: 12px;
 }
 
 .votar-header {
@@ -1079,5 +1167,94 @@ body {
    }
 }
 
-/*----------------- ¡PAGINA DONDE SER ELIGE EL VOTO END ------------*/
+/*----------------- PAGINA DONDE SER ELIGE EL VOTO END ------------*/
 
+/*--------- TARJETA CONFIRMACIÓN DE VOTACIÓN ---------*/
+
+.confirmacion-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.confirmacion-card {
+   max-width: 640px;
+   height: auto;
+   border: 1px solid var(--border-color);
+   box-shadow:var(--shadow-gold-glow);
+   border-radius: var(--radius-lg);
+   padding: 30px 20px;
+   margin: 40px 20px;
+}
+
+.confirmacion-icono {
+   text-align: center;
+   color: var(--accent-gold-light); 
+}
+
+.confirmacion-header {
+   h1{
+      color: var(--accent-ochre);
+      font-size: 1.5rem;
+      line-height: 1.5;
+   }
+
+   p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-wrap: wrap;
+   }
+}
+
+
+.confirmacion-resumen {
+   display: flex;
+   flex-direction:column;
+   gap: 10px;
+
+   h2 {
+      padding: 0px;
+      margin: 0px;
+      color: var(--accent-gold-light);
+   }
+}
+
+.resumen-lista {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-lg);
+   padding: 20px;
+   margin-bottom: 35px;
+}
+
+.resumen-fila {
+   border-bottom: 1px solid var(--border-color);
+
+   dt {
+      color: var(--accent-gold-light);
+   }
+}
+
+/*--------- TARJETA CONFIRMACIÓN DE VOTACIÓN END ---------*/
+
+
+/*--------- TARJETA RESULTADOS PARCIALES ---------*/
+
+.resultado-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0px;
+}
+
+.resultado-card {
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-lg);
+   box-shadow: var(--shadow-card);
+   padding: 20px;
+   margin: auto 10px
+}
